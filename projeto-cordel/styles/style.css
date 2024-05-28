@@ -1,13 +1,23 @@
 @charset "UTF-8";
 
+
+
+:root {
+    --fontpadrao: Verdana, Geneva, Tahoma, sans-serif;
+    --fontetitulo: "Salsa", cursive;
+    --fontecordel: "Rosarivo", cursive;
+}
+
 * {
     margin: 0px;
-    padding: 0px;
+    padding: 0px; 
 }
 
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fontpadrao);
+    font-size: 1em;
 }
 
 header {
@@ -19,23 +29,26 @@ header {
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--fontetitulo);
+    font-size: 6vw;
 }
 
 header > p {
     padding-bottom: 50px;
-
+    font-size: 1.5em;
 }
 
 section {
     padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
+    padding-bottom: 10vw;
     padding-left: 30px;
+    font-family: var(--fontecordel);
 }
 
 section > p {
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 2em;
+    padding: 20px;
+    font-size: 3vw;
 }
 
 a {
@@ -52,9 +65,30 @@ a:hover {
     background-color: white;
 }
 
+.normal > p {
+    padding-bottom: 2em;
+}
+
 .imagem {
     background-color: rgb(74, 74, 74);
     color: white;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#imagem1 {
+    background-image: url('../imagens/background001.jpg');
+}
+
+#imagem2 {
+    background-image: url('../imagens/background002.jpg');
+}
+
+.imagem > p {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 footer {
