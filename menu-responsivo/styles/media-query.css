@@ -8,10 +8,9 @@
     main {
         max-width: 700px;
     }
-    
-    menu {
+
+    menu#itens {
         display: block;
-        margin-left: 15px;
     }
 
     menu a {

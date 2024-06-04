@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/media-query.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="altam()">
     <header>
         <h1>Criando um menu responsivo</h1>
         <span id="menu" class="material-icons" onclick="it()" oncl>menu</span>
@@ -33,6 +33,14 @@
     </main>
 
     <script>
+        // Monitorar o tamanho da tela - window.innerWidth == 1223 (sem o px)
+        function altam() {
+            if(window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
 
         function it(){
             if (itens.style.display == 'block') {
