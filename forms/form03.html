@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Teste de formulários</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome" autocomplete="username" maxlength="30" required>
+        </p>
+        <p>
+            <label for="imedia">Média: </label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.01" required>
+        </p>
+        <fieldset> 
+            <!-- O fieldset serve para agrupar campos semelhantes -->
+            <legend>Dados sobre a Prova</legend>
+            <p>
+                <label for="imes">Mês de Realização: </label>
+                <input type="month" name="mes" id="imes" value="2024-06" required>
+            </p>
+            <p>
+                <label for="idata">Data da Prova: </label>
+                <input type="date" name="data" id="idata" required>
+            </p>
+            <p>
+                <label for="ihora">Hora da Prova: </label>
+                <input type="time" name="hora" id="ihora" required>
+            </p>
+        </fieldset>
+
+        <!-- Estudar sobre RegEx -->
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+        <!-- Input radio -->
+
+        <fieldset>
+            
+            <legend>Sexo</legend>
+
+            <input type="radio" name="sexo" id="imas" checked value="M"> <label for="imas">Masculino</label>
+            <input type="radio" name="sexo" id="ifem" value="F"> <label for="ifem">Feminino</label>
+    
+        </fieldset>
+        
+        <!-- Obrigatório o método do formulário ser POST -->
+
+        <label for="ifoto">Escolha a sua foto de perfil</label>
+        
+        <input type="file" name="foto" id="ifoto"><br>
+        <br><br><br>
+        
+        <label for="imsg">Digite uma mensagem:<br> </label>
+        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+
+    </form>
+</body>
+</html>

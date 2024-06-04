@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mostrando a nota de um range</h1>
+    <form action="#">
+        <input type="range" name="nota" id="inota" min="0" max="10" oninput="ival.innerHTML = Number(inota.value)">
+        <output id="ival">5</output>
+    </form>
+    <h2>Somando com inputs</h2>
+    <form action="#">
+        <label for="in1">Escolha um número: </label>
+        <input type="number" name="n1" id="in1" min="0" max="10" oninput="soma.innerHTML = Number(in1.value) + Number(in2.value)"><br>
+
+        <label for="in2">Escolha outro número: </label>
+        <input type="number" name="n2" id="in2" min="0" max="10" oninput="soma.innerHTML = Number(in1.value) + Number(in2.value)"><br>
+
+        <output id="soma">0</output>
+    </form>
+
+    <h2>Dizendo sua idade</h2>
+    <form action="#">
+
+        <label for="iano">Em que ano você nasceu? </label>
+        <input type="number" name="ano" id="iano" min="1900" max="2024" value="2000" oninput="calID()"><br>
+
+        <output id="ida">Você tem(ou terá) _ anos em 2024`</output>
+    </form>
+
+    <script>
+        function calID() {
+            var atual = new Date().getFullYear();
+            ida.innerHTML = String(`Você tem(ou terá) ${atual - iano.value} anos em ${atual}`);
+        }
+    </script>
+</body>
+</html>
