@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Layout em Grid</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            border: 1px solid red;
+        }
+
+        .row::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+    </style>
+
+</head>
+<body>
+    <header class="col-12">ESTE HEADER POSSUI TODOS AS COLUNAS</header>
+
+    <div class="row">
+        <div class="col-4">
+            <p>Aqui é um local onde eu irei escrever algumas coisas</p>
+        </div>
+        <div class="col-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magnam non quaerat, possimus deleniti maxime recusandae ducimus incidunt ad, fuga libero. Veniam vero repudiandae molestiae quidem eligendi iusto tenetur error.</p>
+        </div>
+        <div class="col-3">
+            Este aqui irá ocupar apenas 3 colunas
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae in magnam hic neque aliquid cupiditate quam iusto maiores non eos sint necessitatibus tempora, assumenda, modi obcaecati cum, maxime itaque magni Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem asperiores, eius facere architecto enim perferendis incidunt quod officia hic vel. Dolore nobis neque rem molestiae perferendis quo, vero nesciunt accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quo odio tempora quod accusantium nulla et voluptatibus consequuntur architecto quidem alias, doloremque facilis ipsam, sed est minima! Consectetur, earum sequi!</p>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</body>
+</html>
