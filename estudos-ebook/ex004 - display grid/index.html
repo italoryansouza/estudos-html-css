@@ -12,7 +12,30 @@
     <div class="container">
         <header class="header">Cabeçalho</header>
         <nav class="nav">Navegação</nav>
-        <main class="main">Conteúdo Principal</main>
+        <main class="main">Conteúdo Principal
+
+            <form action="submit.php">
+
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="brasil">Brasil</option>
+                    <option value="eua">Estados Unidos</option>
+                    <option value="japao">Japão</option>
+                </select>
+                <br>
+                <label for="comentarios">Comentários:</label> <br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+                <br>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" pattern=".{6,}" title="A senha deve ter pelo menos 6 caracteres" required>
+
+                <br>
+                <button type="submit">Enviar</button>
+                
+            </form>
+
+        </main>
         <aside class="aside">Conteúdo Adicional</aside>
         <footer class="footer">Rodapé</footer>
     </div>
